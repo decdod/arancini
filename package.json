@@ -1,13 +1,17 @@
 {
-  "name": "arancini-monorepo",
-  "private": true,
+  "name": "arancini",
+  "version": "1.0.0",
+  "private": false,
   "scripts": {
-    "build": "echo \"no-op\"",
-    "test": "echo \"no-op\"",
-    "lint": "echo \"no-op\"",
-    "change": "echo \"no-op\"",
-    "bump": "echo \"no-op\"",
-    "release": "echo \"no-op\""
+    "build": "npm run build:all",
+    "test": "npm run test:all",
+    "lint": "npm run lint:all",
+    "change": "changeset",
+    "bump": "changeset version && npm install",
+    "release": "npm run build && npm test && changeset publish",
+    "build:all": "echo 'build scripts for individual packages can be added here'",
+    "test:all": "echo 'test scripts for individual packages can be added here'",
+    "lint:all": "echo 'lint scripts for individual packages can be added here'"
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
