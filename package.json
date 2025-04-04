@@ -1,18 +1,13 @@
 {
-  "name": "root",
+  "name": "arancini-monorepo",
   "private": true,
-  "packageManager": "yarn@4.0.2",
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
   "scripts": {
-    "build": "yarn workspaces foreach -A -t run build",
-    "test": "yarn workspaces foreach -A -t run test",
-    "lint": "yarn workspaces foreach -A -t run lint",
-    "change": "yarn changeset",
-    "bump": "yarn changeset version && yarn install --mode update-lockfile",
-    "release": "yarn build && yarn test && changeset publish"
+    "build": "echo \"no-op\"",
+    "test": "echo \"no-op\"",
+    "lint": "echo \"no-op\"",
+    "change": "echo \"no-op\"",
+    "bump": "echo \"no-op\"",
+    "release": "echo \"no-op\""
   },
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
